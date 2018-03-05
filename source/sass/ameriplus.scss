@@ -150,6 +150,7 @@ header[role="banner"] {
         }
         @include lg {
             padding-bottom: 180px;
+            padding-left: 100px;
         }
         @include xl {
             padding-bottom: 220px;
@@ -185,8 +186,27 @@ header[role="banner"] {
     }
 }
 
-#contact h2 {
-    border-bottom: 1px solid #979797;
+#contact {
+    
+    section {
+        
+        &:last-child { // marketing section
+            background-color: #AFB7BC;
+        }
+    }
+
+    h2 {
+        border-bottom: 1px solid #979797;
+        
+        span {
+            display: none;
+        }
+    }
+    
+    a[href^="tel"] {
+        color: $color1;
+        text-decoration: none;
+    }
 }
 
 #products {
@@ -247,6 +267,7 @@ header[role="banner"] {
     grid-gap: 20px;
     background-color: $color4;
     padding: em(20px, 16px);
+    margin-bottom: em(50px, 16px);
 
     @include md {
         grid-template-columns: repeat(2, 1fr);

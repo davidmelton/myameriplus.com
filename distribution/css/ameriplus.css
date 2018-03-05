@@ -121,7 +121,8 @@ header[role="banner"] {
           width: 300px; } }
     @media (min-width: 992px) {
       header[role="banner"] > div:first-child {
-        padding-bottom: 180px; } }
+        padding-bottom: 180px;
+        padding-left: 100px; } }
     @media (min-width: 1200px) {
       header[role="banner"] > div:first-child {
         padding-bottom: 220px; } }
@@ -146,8 +147,17 @@ header[role="banner"] {
     header[role="banner"] div:last-child a {
       color: #fff; }
 
+#contact section:last-child {
+  background-color: #AFB7BC; }
+
 #contact h2 {
   border-bottom: 1px solid #979797; }
+  #contact h2 span {
+    display: none; }
+
+#contact a[href^="tel"] {
+  color: #595959;
+  text-decoration: none; }
 
 #products {
   display: grid;
@@ -186,7 +196,8 @@ header[role="banner"] {
   grid-template-columns: 1fr;
   grid-gap: 20px;
   background-color: #003e72;
-  padding: 1.25em; }
+  padding: 1.25em;
+  margin-bottom: 3.125em; }
   @media (min-width: 768px) {
     #forms {
       grid-template-columns: repeat(2, 1fr); } }
