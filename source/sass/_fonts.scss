@@ -1,0 +1,31 @@
+$web-font-path: '../fonts/';
+
+@font-face {
+	font-family: 'RobotoSlab-Bold';
+	src: url('#{$web-font-path}RobotoSlab-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'RobotoSlab-Regular';
+	src: url('#{$web-font-path}RobotoSlab-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'RobotoSlab-Light';
+	src: url('#{$web-font-path}RobotoSlab-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'RobotoSlab-Thin';
+	src: url('#{$web-font-path}RobotoSlab-Thin.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('#{$web-font-path}Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto-Light';
+	src: url('#{$web-font-path}Roboto-Light.woff') format('woff');
+}

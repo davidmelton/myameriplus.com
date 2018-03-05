@@ -1,0 +1,24 @@
+{
+  "name": "myameriplus.com",
+  "version": "1.0.0",
+  "description": "AmeriPlus web site home page project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmelton/myameriplus.com.git"
+  },
+  "author": "david melton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidmelton/myameriplus.com/issues"
+  },
+  "homepage": "https://github.com/davidmelton/myameriplus.com#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
