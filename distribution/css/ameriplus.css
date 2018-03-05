@@ -183,9 +183,34 @@ header[role="banner"] {
 
 #forms {
   display: grid;
-  background-color: #003e72; }
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  background-color: #003e72;
+  padding: 1.25em; }
+  @media (min-width: 768px) {
+    #forms {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 992px) {
+    #forms {
+      padding: 4.375em 4.6875em;
+      grid-gap: 75px; } }
+  @media (min-width: 1200px) {
+    #forms {
+      padding: 4.375em 12.5em;
+      grid-gap: 100px; } }
   #forms h3, #forms a {
-    color: #fff; }
+    display: block;
+    color: #fff;
+    margin: 0;
+    padding: 0.875em 1.25em;
+    border-bottom: 1px solid #fff;
+    text-decoration: none; }
+  #forms h3, #forms a:hover {
+    background-color: rgba(255, 255, 255, 0.15); }
+  #forms a {
+    background-color: rgba(255, 255, 255, 0.35); }
+  #forms ul li:last-child a {
+    border: none; }
   #forms section {
     border: 1px solid #fff; }
 
@@ -195,7 +220,6 @@ header[role="banner"] {
 footer[role="contentinfo"] {
   grid-column: span 12;
   padding: 1.41667em 0 0;
-  border-top: 0.08333em solid #595959;
   margin: 0 0 3em; }
 
 /* form elements */
