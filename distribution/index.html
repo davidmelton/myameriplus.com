@@ -11,17 +11,17 @@
     <body>
         <div class="container" vocab="http://schema.org/" typeof="Organization">
             <header role="banner">
-                <div>
-                    <a href="/"><img src="images/ameriplus.svg" alt="AmeriPlus"></a>
+                <div id="hero">
+                    <a href="index.html"><img src="images/ameriplus.svg" alt="AmeriPlus"></a>
                 </div>
 
-                <div>
+                <div id="intro">
                     <h1><span property="name">AmeriPlus</span>&#174;, Protect Your Investment&#8480;</h1>
                     <p property="description">Guaranteed asset protection and vehicle service contracts.</p>
                     <p>Vehicle protection should be straightforward and uncomplicated for your customers. AmeriPlus protects customers against a majority of out-of-pocket repair expenses. With four signature products, AmeriPlus offers coverage for almost any customer.</p>
                 </div>
 
-                <div>
+                <div id="login">
                     <h2>Log In</h2>
                     <form action="" method="" id="login">
                         <fieldset>
@@ -29,16 +29,12 @@
 
                             <p>Dealers: Log in to create forms online and remit policies electronically.</p>
 
-                            <label for="login">
-                                
-                                <input  name="login" type="text" placeholder="email@example.com" required>
-                                <span>Login</span>
-                            </label>
+                            <label for="login">Login</label>
+                            <input  name="login" type="text" placeholder="Login" required>
+                            
 
-                            <label for="password">
-                                <input name="password" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required>
-                                <span>Password</span>
-                            </label>
+                            <label for="password">Password</label>
+                            <input name="password" type="password" placeholder="Password" required>
 
                             <button type="submit">Go</button>
 
@@ -76,111 +72,114 @@
 
                 </section>
 
-                <section id="forms">
+                <section id="documents">
                     <h2>AmeriPlus Forms</h2>
+                    <div>
+                        <section>
+                            <h3><abbr title="Guaranteed Asset Protection">GAP</abbr> Forms</h3>
+                            <ul>
+                                <li><a href="">Contract Lookup</a></li>
+                                <li><a href="">Cancellation Worksheet</a></li>
+                                <li><a href="">Claim Worksheet</a></li>
+                                <li><a href="">Reporting/Remit Form</a></li>
+                            </ul>
+                        </section>
 
-                    <section>
-                        <h3><abbr title="Guaranteed Asset Protection">GAP</abbr> Forms</h3>
-                        <ul>
-                            <li><a href="">Contract Lookup</a></li>
-                            <li><a href="">Cancellation Worksheet</a></li>
-                            <li><a href="">Claim Worksheet</a></li>
-                            <li><a href="">Reporting/Remit Form</a></li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h3><abbr title="Vehicle Service Contract">VSC</abbr> Forms</h3>
-                        <ul>
-                            <li><a href="">Cancellation Request</a></li>
-                            <li><a href="">Transfer Request</a></li>
-                            <li><a href="">Reporting/Remit Form</a></li>
-                            <li><a href="">SPP Reporting/Remit Form</a></li>
-                        </ul>
-                    </section>
+                        <section>
+                            <h3><abbr title="Vehicle Service Contract">VSC</abbr> Forms</h3>
+                            <ul>
+                                <li><a href="">Cancellation Request</a></li>
+                                <li><a href="">Transfer Request</a></li>
+                                <li><a href="">Reporting/Remit Form</a></li>
+                                <li><a href="">SPP Reporting/Remit Form</a></li>
+                            </ul>
+                        </section>
+                    </div>
                 </section>
 
-                <section id="contact">
-                    <h2><span>AmeriPlus </span>Contact Information</h2>
+                <section id="contacts">
+                    <div>
+                        <h2><span>AmeriPlus </span>Contact Information</h2>
+                    
+                        <section property="contactPoint" typeof="ContactPoint">
+                            <h3 property="contactType"><abbr title="Guaranteed Asset Protection">GAP</abbr> Claims</h3>
+                            <ul>
+                                <li><a href="tel:+1-800-822-8587" property="telephone" content="+18008228587">1-800-822-8587</a> (option 1)</li>
+                                <li><span property="faxNumber" content="+16192280129">1-619-228-0129</span> (Fax)</li>
+                                <li><a href="">gap.benefits@amtrustgroup.com</a></li>
+                            </ul>
+                        </section>
 
+                        <section property="contactPoint" typeof="ContactPoint">
+                            <h3 property="contactType"><abbr title="Guaranteed Asset Protection">GAP</abbr> Cancellations</h3>
+                            <ul>
+                                <li><a href="tel:+1-800-822-8587" property="telephone" content="+18008228587">1-800-822-8587</a> (option 2)</li>
+                                <li><span property="faxNumber" content="+18774774251">1-877-477-4251</span> (Fax)</li>
+                            </ul>
+                        </section>
+
+                        <section id="status">
+                            <h3>Check <abbr title="Guaranteed Asset Protection">GAP</abbr> Claim Status</h3>
+                            <div>
+                                <h4>Registered Users</h4>
+                                <p>Log in to provide the claims department with your email address to receive automated status emails (financial institutions may also receive automated updated when providing an email address).</p>
+                            </div>
+
+                            <div>
+                                <h4>Non-Registered Users</h4>
+                                <p>Use <a href="">eClaims</a>.</p>
+                            </div>
+                        </section>
+
+                        <section property="contactPoint" typeof="ContactPoint">
+                            <h3 property="contactType"><abbr title="Vehicle Service Contract">VSC</abbr> Claims</h3>
+                            <ul>
+                                <li><a href="tel:+1-800-900-6229" property="telephone" content="+18009006229">1-800-900-6229</a></li>
+                                <li><span property="faxNumber" content="+18774774251">1-877-477-4251</span> (Fax)</li>
+                            </ul>
+                        </section>
+
+                        <section property="contactPoint" typeof="ContactPoint">
+                            <h3 property="contactType"><abbr title="Tire &#38; Wheel Protection">TWP</abbr> Claims</h3>
+                            <ul>
+                                <li><a href="tel:+1-888-637-3041" property="telephone" content="+18886373041">1-888-637-3041</a></li>
+                                <li><span property="faxNumber" content="+18774774251">1-877-477-4251</span> (Fax)</li>
+                            </ul>
+                        </section>
+
+                        <section property="contactPoint" typeof="ContactPoint">
+                            <h3 property="contactType">Customer Service</h3>
+                            <ul>
+                                <li><a href="tel:+1-800-822-8587" property="telephone" content="+18008228587">1-800-822-8587</a> (option 8)</li>
+                                <li>Program Administrator<br>
+                                1785 Hancock Street<br>
+                                Suite 100<br>
+                                San Diego, CA 92110-2051</li>
+                            </ul>
+                        </section>
+
+                        <section property="contactPoint" typeof="ContactPoint">
+                            <h3 property="contactType">Cancellations and Administration</h3>
+                            <ul>
+                                <li><a href="tel:+1-800-822-8587" property="telephone" content="+18008228587">1-800-822-8587</a> (option 5, then option 2)</li>
+                                <li><span property="faxNumber" content="+18774774251">1-877-477-4251</span> (Fax)</li>
+                            </ul>
+                        </section>
+                    </div>
+                    
                     <section property="contactPoint" typeof="ContactPoint">
-                        <h3 property="contactType"><abbr title="Guaranteed Asset Protection">GAP</abbr> Claims</h3>
-                        <ul>
-                            <li><a href="tel:+1-800-822-8587" property="telephone" content="+18008228587">1-800-822-8587</a> (option 1)</li>
-                            <li><span property="faxNumber" content="+16192280129">1-619-228-0129</span> (Fax)</li>
-                            <li><a href="">gap.benefits@amtrustgroup.com</a></li>
-                        </ul>
-                    </section>
-
-                    <section property="contactPoint" typeof="ContactPoint">
-                        <h3 property="contactType"><abbr title="Guaranteed Asset Protection">GAP</abbr> Cancellations</h3>
-                        <ul>
-                            <li><a href="tel:+1-800-822-8587" property="telephone" content="+18008228587">1-800-822-8587</a> (option 2)</li>
-                            <li><span property="faxNumber" content="+18774774251">1-877-477-4251</span> (Fax)</li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h3>Check <abbr title="Guaranteed Asset Protection">GAP</abbr> Claim Status</h3>
                         <div>
-                            <h4>Registered Users</h4>
-                            <p>Log in to provide the claims department with your email address to receive automated status emails (financial institutions may also receive automated updated when providing an email address).</p>
+                            <h3 property="contactType">Marketing</h3>
+                            <ul>
+                                <li><a href="tel:+1-619-228-0100" property="telephone" content="+16192280100">1-619-228-0100</a> (option 4)</li>
+                            </ul>
+                            <p>For questions or to purchase AmeriPlus marketing materials, contact your AmeriCredit Dealer Relationship Manager.</p>
                         </div>
-
-                        <div>
-                            <h4>Non-Registered Users</h4>
-                            <p>Use <a href="">eClaims</a>.</p>
-                        </div>
-                    </section>
-
-                    <section property="contactPoint" typeof="ContactPoint">
-                        <h3 property="contactType"><abbr title="Vehicle Service Contract">VSC</abbr> Claims</h3>
-                        <ul>
-                            <li><a href="tel:+1-800-900-6229" property="telephone" content="+18009006229">1-800-900-6229</a></li>
-                            <li><span property="faxNumber" content="+18774774251">1-877-477-4251</span> (Fax)</li>
-                        </ul>
-                    </section>
-
-                    <section property="contactPoint" typeof="ContactPoint">
-                        <h3 property="contactType"><abbr title="Tire &#38; Wheel Protection">TWP</abbr> Claims</h3>
-                        <ul>
-                            <li><a href="tel:+1-888-637-3041" property="telephone" content="+18886373041">1-888-637-3041</a></li>
-                            <li><span property="faxNumber" content="+18774774251">1-877-477-4251</span> (Fax)</li>
-                        </ul>
-                    </section>
-
-                    <section property="contactPoint" typeof="ContactPoint">
-                        <h3 property="contactType">Customer Service</h3>
-                        <ul>
-                            <li><a href="tel:+1-800-822-8587" property="telephone" content="+18008228587">1-800-822-8587</a> (option 8)</li>
-                            <li>Program Administrator<br>
-                            1785 Hancock Street<br>
-                            Suite 100<br>
-                            San Diego, CA 92110-2051</li>
-                        </ul>
-                    </section>
-
-                    <section property="contactPoint" typeof="ContactPoint">
-                        <h3 property="contactType">Cancellations and Administration</h3>
-                        <ul>
-                            <li><a href="tel:+1-800-822-8587" property="telephone" content="+18008228587">1-800-822-8587</a> (option 5, then option 2)</li>
-                            <li><span property="faxNumber" content="+18774774251">1-877-477-4251</span> (Fax)</li>
-                        </ul>
-                    </section>
-
-                    <section property="contactPoint" typeof="ContactPoint">
-                        <h3 property="contactType">Marketing</h3>
-                        <ul>
-                            <li><a href="tel:+1-619-228-0100" property="telephone" content="+16192280100">1-619-228-0100</a> (option 4)</li>
-                        </ul>
-                        <p>For questions or to purchase AmeriPlus marketing materials, contact your AmeriCredit Dealer Relationship Manager.</p>
                     </section>
                 </section>
-
             </main>
-
             <footer role="contentinfo">
-                <p>&#169; 2018 General Motors Financial Company, Inc. AmeriPlus is a registered trademark of General Motors Financial Company, Inc. GM Financial is a registered trademark of General Motors LLC.</p>
+                <p>&#169; 2018 General Motors Financial Company, Inc. AmeriPlus is a registered trademark of General Motors Financial Company, Inc. GM Financial is a registered trademark of General Motors LLC. Read our <a href="privacy.html">privacy policy</a>.</p>
             </footer>
         </div>
     </body>

@@ -60,6 +60,15 @@ h3 {
   padding: 0;
   margin: 0 0 0.85714em; }
 
+h4 {
+  font-size: 1.16667em;
+  font-family: RobotoSlab-Light, RobotoSlab-Regular, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color: #003e72;
+  padding: 0;
+  margin: 0 0 0.85714em; }
+
 p {
   font-size: 1em;
   padding: 0;
@@ -85,7 +94,6 @@ ul {
 /* grid layouts */
 .container {
   margin: 0 auto;
-  padding: 10px;
   background-color: #fff; }
   @media (min-width: 576px) {
     .container {
@@ -104,60 +112,51 @@ ul {
 header[role="banner"] {
   display: grid;
   grid-template-rows: auto; }
-  header[role="banner"] > div:first-child {
+  header[role="banner"] #hero {
     background-color: #e9e9e9;
     background-image: url(../images/hero.jpg);
     background-position: bottom;
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 10px 0 100px 10px; }
-    header[role="banner"] > div:first-child a {
+    header[role="banner"] #hero a {
       display: block;
       width: 180px; }
     @media (min-width: 768px) {
-      header[role="banner"] > div:first-child {
+      header[role="banner"] #hero {
         padding-bottom: 140px; }
-        header[role="banner"] > div:first-child a {
+        header[role="banner"] #hero a {
           width: 300px; } }
     @media (min-width: 992px) {
-      header[role="banner"] > div:first-child {
+      header[role="banner"] #hero {
         padding-bottom: 180px;
         padding-left: 100px; } }
     @media (min-width: 1200px) {
-      header[role="banner"] > div:first-child {
+      header[role="banner"] #hero {
         padding-bottom: 220px; } }
   header[role="banner"] h1, header[role="banner"] [property="description"] {
     display: none; }
-  header[role="banner"] div:nth-child(2) p {
+  header[role="banner"] #intro p {
     margin: 0 auto;
-    font-size: 1.33333em;
+    max-width: 940px;
+    font-size: 1.41667em;
     font-family: RobotoSlab-Thin, sans-serif;
-    padding: 1.25em 0;
+    padding: 1.17647em;
     text-align: center; }
-    @media (min-width: 576px) {
-      header[role="banner"] div:nth-child(2) p {
-        padding: 1.25em; } }
-  header[role="banner"] div:last-child {
+    @media (min-width: 992px) {
+      header[role="banner"] #intro p {
+        padding: 2.35294em 1.17647em; } }
+  header[role="banner"] #login {
     grid-row: 2;
     color: #fff;
     background-color: #2f373e;
-    padding: 0 10px; }
-    header[role="banner"] div:last-child h2 {
+    padding: 0.625em; }
+    header[role="banner"] #login h2 {
       display: none; }
-    header[role="banner"] div:last-child a {
+    header[role="banner"] #login a {
       color: #fff; }
-
-#contact section:last-child {
-  background-color: #AFB7BC; }
-
-#contact h2 {
-  border-bottom: 1px solid #979797; }
-  #contact h2 span {
-    display: none; }
-
-#contact a[href^="tel"] {
-  color: #595959;
-  text-decoration: none; }
+    header[role="banner"] #login p {
+      font-size: 90%; }
 
 #products {
   display: grid;
@@ -191,47 +190,104 @@ header[role="banner"] {
     #products div:nth-child(5) {
       background-color: #F5A623; }
 
-#forms {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 20px;
+#documents {
   background-color: #003e72;
+  background-image: url(../images/bg-documents.jpg);
+  background-size: cover;
   padding: 1.25em;
   margin-bottom: 3.125em; }
-  @media (min-width: 768px) {
-    #forms {
-      grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 992px) {
-    #forms {
-      padding: 4.375em 4.6875em;
-      grid-gap: 75px; } }
-  @media (min-width: 1200px) {
-    #forms {
-      padding: 4.375em 12.5em;
-      grid-gap: 100px; } }
-  #forms h3, #forms a {
+    #documents {
+      padding: 2.5em 1.25em; } }
+  #documents div {
+    max-width: 740px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px; }
+    @media (min-width: 768px) {
+      #documents div {
+        grid-template-columns: repeat(2, 1fr); } }
+  #documents h3, #documents a {
     display: block;
     color: #fff;
     margin: 0;
     padding: 0.875em 1.25em;
     border-bottom: 1px solid #fff;
     text-decoration: none; }
-  #forms h3, #forms a:hover {
+  #documents h3, #documents a:hover {
     background-color: rgba(255, 255, 255, 0.15); }
-  #forms a {
+  #documents a {
     background-color: rgba(255, 255, 255, 0.35); }
-  #forms ul li:last-child a {
+  #documents ul li:last-child a {
     border: none; }
-  #forms section {
+  #documents section {
     border: 1px solid #fff; }
 
-#products h2, #forms h2 {
+#products h2, #documents h2 {
   display: none; }
 
+#contacts > div {
+  display: grid;
+  grid-gap: 20px 100px; }
+  @media (min-width: 768px) {
+    #contacts > div {
+      grid-template-columns: repeat(2, 1fr); } }
+
+#contacts > div,
+#contacts > section div {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 1.25em; }
+
+#contacts > section {
+  background-color: #ccc;
+  background-image: url(../images/bg-marketing.jpg);
+  background-size: cover;
+  width: 100%;
+  content: "";
+  display: table;
+  clear: both; }
+
+#contacts #status {
+  display: grid; }
+  @media (min-width: 768px) {
+    #contacts #status {
+      grid-column: span 2; } }
+  @media (min-width: 400px) {
+    #contacts #status {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: inherit; }
+      #contacts #status h3 {
+        grid-column: span 2; } }
+  #contacts #status h3, #contacts #status h4 {
+    color: #595959; }
+
+#contacts h2 {
+  border-bottom: 1px solid #ccc; }
+  @media (min-width: 768px) {
+    #contacts h2 {
+      grid-column: span 2; } }
+  #contacts h2 span {
+    display: none; }
+
+#contacts a[href^="tel"] {
+  color: #595959;
+  text-decoration: none; }
+
+#privacy {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 2.5em 0; }
+
 footer[role="contentinfo"] {
-  grid-column: span 12;
-  padding: 1.41667em 0 0;
-  margin: 0 0 3em; }
+  background-color: #f6f7f9;
+  color: #595959;
+  text-transform: uppercase;
+  padding: 1.25em;
+  content: "";
+  display: table;
+  clear: both; }
 
 /* form elements */
 form, fieldset {
@@ -246,70 +302,61 @@ legend {
   font-family: RobotoSlab-Regular, sans-serif;
   font-weight: bold;
   padding: 0;
-  margin: 0 0 0.75em; }
+  margin: 0; }
 
 label {
+  display: none; }
+
+input {
   display: block;
-  position: relative;
-  color: #2f373e;
-  font-size: 1em;
+  font-size: 1.16667em;
   font-family: inherit;
-  font-weight: 600;
-  padding: 0; }
-  label > span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    cursor: text;
-    font-size: 1em;
-    opacity: 1;
-    transition: all .2s;
-    padding-left: 10px;
-    box-sizing: border-box; }
-  label input {
-    display: block;
-    font-size: 1.16667em;
-    font-family: inherit;
-    font-weight: normal;
-    line-height: 1.75;
-    margin: 0 0 1.42857em;
-    padding: 0.57143em;
-    padding-left: 10px;
-    border: 0.07143em solid #afb7bc;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 2px;
-    box-shadow: inset 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
-    box-sizing: border-box; }
-    label input::placeholder {
-      opacity: 1;
-      transition: all .2s; }
-    label input:placeholder-shown:not(:focus)::placeholder {
-      opacity: 0; }
-    label input:placeholder-shown:not(:focus) + * {
-      font-size: 1.16667em;
-      opacity: 0.5;
-      top: 0.83333em; }
-    label input:focus {
-      outline: none;
-      background-color: #fff; }
+  font-weight: normal;
+  line-height: 1.75;
+  margin: 0 0 0.71429em;
+  padding: 0.57143em;
+  padding-left: 10px;
+  border: 0.07143em solid #afb7bc;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: inset 1px 1px 1px 0 rgba(0, 0, 0, 0.15);
+  box-sizing: border-box; }
+  input:focus {
+    outline: none;
+    background-color: #fff; }
+  @media (min-width: 576px) {
+    input {
+      display: inline-block;
+      width: 160px;
+      margin-right: 1.42857em; } }
+  @media (min-width: 768px) {
+    input {
+      width: 235px; } }
+  @media (min-width: 992px) {
+    input {
+      width: 265px; } }
 
 button {
   display: block;
-  font-size: 1em;
+  font-size: 1.16667em;
   font-family: inherit;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  line-height: 1.5;
-  margin: 0 0 1.66667em;
-  padding: 0.66667em 1.5em;
+  line-height: 1.75;
+  margin: 0 0 0.71429em;
+  padding: 0.57143em;
   border: 1px solid #595959;
   border-radius: 4px;
   background-color: #009ff2;
   color: #fff;
   box-sizing: border-box;
-  outline: 0; }
+  outline: 0;
+  width: 140px; }
   button:focus, button:hover {
     background-color: #fff;
     color: #595959; }
+  @media (min-width: 576px) {
+    button {
+      display: inline-block; } }

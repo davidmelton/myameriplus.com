@@ -70,6 +70,18 @@ h3 {
     margin: 0 0 em(12px, 14px);
 }
 
+h4 {
+    font: {
+        size: em(14px);
+        family: RobotoSlab-Light, $heading-font-family;
+        weight: bold;
+        style: italic;
+    }
+    color: $color4;
+    padding: 0;
+    margin: 0 0 em(12px, 14px);
+}
+
 p {
     font-size: em(12px);
     padding: 0;
@@ -104,7 +116,6 @@ ul {
 
 .container {
     margin: 0 auto;
-    padding: 10px;
     background-color: #fff;
     
     @include sm {
@@ -126,7 +137,7 @@ header[role="banner"] {
     display: grid;
     grid-template-rows: auto;
     
-    > div:first-child {
+    #hero {
         background: {
             color: #e9e9e9;
             image: url(../images/hero.jpg);
@@ -161,51 +172,30 @@ header[role="banner"] {
         display: none;
     }
     
-    div:nth-child(2) p {
+    #intro p {
         margin: 0 auto;
+        max-width: 940px;
         font: {
-            size: em(16px);
+            size: em(17px);
             family: RobotoSlab-Thin, sans-serif;
         }
-        padding: em(20px, 16px) 0;
+        padding: em(20px, 17px);
         text-align: center;
 
-        @include sm {
-            padding: em(20px, 16px);
+        @include lg {
+            padding: em(40px, 17px) em(20px, 17px);
         }
     }
     
-    div:last-child { // login form
+    #login { // login form
         grid-row: 2;
         color: #fff;
         background-color: $color2;
-        padding: 0 10px;
+        padding: em(10px, 16px);
         
         h2 {display: none}
         a {color: #fff}
-    }
-}
-
-#contact {
-    
-    section {
-        
-        &:last-child { // marketing section
-            background-color: #AFB7BC;
-        }
-    }
-
-    h2 {
-        border-bottom: 1px solid #979797;
-        
-        span {
-            display: none;
-        }
-    }
-    
-    a[href^="tel"] {
-        color: $color1;
-        text-decoration: none;
+        p { font-size: 90%;}
     }
 }
 
@@ -261,26 +251,29 @@ header[role="banner"] {
     }
 }
 
-#forms {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    background-color: $color4;
+#documents {
+    background: {
+        color: $color4;
+        image: url(../images/bg-documents.jpg);
+        size: cover;
+    }
     padding: em(20px, 16px);
     margin-bottom: em(50px, 16px);
-
-    @include md {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+    
     @include lg {
-        padding: em(70px, 16px) em(75px, 16px);
-        grid-gap: 75px;
+        padding: em(40px, 16px) em(20px, 16px);
     }
 
-    @include xl {
-        padding: em(70px, 16px) em(200px, 16px);
-        grid-gap: 100px;
+    div {
+        max-width: 740px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     h3, a {
@@ -310,15 +303,82 @@ header[role="banner"] {
     }
 }
 
-#products, #forms {
+#products, #documents {
 
-    h2 {display: none}
+    h2 { display: none; }
+}
+
+#contacts {
+    
+    & > div {
+        display: grid;
+        grid-gap: 20px 100px;
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    & > div,
+    & > section div {
+        max-width: 740px;
+        margin: 0 auto;
+        padding: em(20px, 16px);
+    }
+    
+    & > section { // marketing contacts
+        background: {
+            color: #ccc;
+            image: url(../images/bg-marketing.jpg);
+            size: cover;
+        }
+        width: 100%;
+        @include clearfix;
+    }
+    
+    #status { // check gap claim status
+        display: grid;
+        @include md {
+            grid-column: span 2;
+        }
+        @include rwd(400px) {
+            h3 {
+              grid-column: span 2;
+            }
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: inherit;
+        }
+        h3, h4 { color: $color1; }
+    }
+    
+    h2 {
+        border-bottom: 1px solid #ccc;
+        @include md {
+            grid-column: span 2;
+        }
+        
+        span {
+            display: none;
+        }
+    }
+    
+    a[href^="tel"] {
+        color: $color1;
+        text-decoration: none;
+    }
+}
+
+#privacy {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: em(40px, 16px) 0;
 }
 
 footer[role="contentinfo"] {
-    grid-column: span 12;
-    padding: em(17px, 12px) 0 0;
-    margin: 0 0 em(36px, 12px);
+    background-color: #f6f7f9;
+    color: #595959;
+    text-transform: uppercase;
+    padding: em(20px, 16px);
+    @include clearfix;
 }
 
 /* form elements */
@@ -338,7 +398,7 @@ legend {
         weight: bold;
     }
     padding: 0;
-    margin: 0 0 em(12px, 16px);
+    margin: 0;
 }
 
 fieldset {
@@ -346,89 +406,71 @@ fieldset {
 }
 
 label {
+    display: none;
+}
+
+input {
     display: block;
-    position: relative;
-    color: $color2;
     font: {
-        size: em(12px);
+        size: em(14px);
         family: inherit;
-        weight: 600;
+        weight: normal;
     }
-    padding: 0;
+    line-height: 1.75;
+    margin: 0 0 em(10px, 14px);
+    padding: em(8px, 14px);
+    padding-left: 10px;
+    border: em(1px, 14px) solid #afb7bc;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.15);
+    box-sizing: border-box;
 
-    & > span {
-        position: absolute;
-        left: 0;
-        top: 0;
-        cursor: text;
-        font-size: em(12px);
-        opacity: 1;
-        transition: all .2s;
-        padding-left: 10px;
-        box-sizing: border-box;
-    }
-
-    input {
-        display: block;
-        font: {
-            size: em(14px);
-            family: inherit;
-            weight: normal;
-        }
-        line-height: 1.75;
-        margin: 0 0 em(20px, 14px);
-        padding: em(8px, 14px);
-        padding-left: 10px;
-        border: em(1px, 14px) solid #afb7bc;
-        width: 100%;
+    &:focus {
+        outline: none;
         background-color: #fff;
-        border-radius: 2px;
-        box-shadow: inset 1px 1px 1px 0 rgba(0,0,0,0.15);
-        box-sizing: border-box;
-
-        &::placeholder {
-            opacity: 1;
-            transition: all .2s;
-        }
-
-        &:placeholder-shown:not(:focus)::placeholder {
-            opacity: 0;
-        }
-
-        &:placeholder-shown:not(:focus) + * {
-            font-size: em(14px);
-            opacity: 0.5;
-            top: em(10px, 12px);
-        }
-        
-        &:focus {
-            outline: none;
-            background-color: #fff;
-        }
+    }
+    
+    @include sm {
+        display: inline-block;
+        width: 160px;
+        margin-right: em(20px, 14px);
+    }
+    @include md {
+        width: 235px;
+    }
+    @include lg {
+        width: 265px;
     }
 }
 
 button {
     display: block;
     font: {
-        size: em(12px);
+        size: em(14px);
         family: inherit;
         weight: 600;
     }
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    line-height: 1.5;
-    margin: 0 0 em(20px, 12px);
-    padding: em(8px, 12px) em(18px, 12px);
+    line-height: 1.75;
+    margin: 0 0 em(10px, 14px);
+    padding: em(8px, 14px);
     border: 1px solid $color1;
     border-radius: 4px;
     background-color: $color3;
     color: #fff;
     box-sizing: border-box;
     outline: 0;
+    width: 140px;
     
     &:focus, &:hover {
         background-color: #fff;
         color: $color1;
+    }
+    
+    @include sm {
+        display: inline-block;
     }
 }
