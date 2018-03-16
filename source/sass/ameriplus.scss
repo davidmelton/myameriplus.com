@@ -227,26 +227,26 @@ header[role="banner"] {
     div {
         color: #fff;
         padding: em(20px, 16px);
-        text-shadow: 1px 1px rgba(0,0,0,0.35);
+        //text-shadow: 1px 1px rgba(0,0,0,0.35);
         
         h3 {
             color: inherit;
         }
     
         &:nth-child(2) {
-            background-color: #009FF2;
+            background-color: #00B9F2;
         }
 
         &:nth-child(3) {
-            background-color: #0059A4;
+            background-color: #005DAB;
         }
         
         &:nth-child(4) {
-            background-color: #7ED321;
+            background-color: #8BCC12;
         }
         
         &:nth-child(5) {
-            background-color: #F5A623;
+            background-color: #FF6F00;
         }
     }
 }
@@ -265,7 +265,7 @@ header[role="banner"] {
     }
 
     div {
-        max-width: 740px;
+        max-width: 940px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
@@ -274,6 +274,9 @@ header[role="banner"] {
         @include md {
             grid-template-columns: repeat(2, 1fr);
         }
+        @include lg {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
     h3, a {
@@ -281,25 +284,25 @@ header[role="banner"] {
         color: #fff;
         margin: 0;
         padding: em(14px, 16px) em(20px, 16px);
-        border-bottom: 1px solid #fff;
         text-decoration: none;
+        border: 1px solid #fff;
     }
     
     h3, a:hover {
         background-color: rgba(255,255,255,0.15);
     }
     
-    a {
-        background-color: rgba(255,255,255,0.35);
-    }
-
-    ul {
-        
-        li:last-child a { border: none;}
-    }
-    
-    section {
-        border: 1px solid #fff;
+    a { // iconography
+        background: {
+            color: rgba(255,255,255,0.25);
+            image: url(../images/icon-pdf.svg);
+            repeat: no-repeat;
+            position: 95% 50%;
+        }
+        border-top: none;
+        &.search {
+            background-image: url(../images/icon-zoom.svg);
+        }
     }
 }
 
@@ -365,6 +368,27 @@ header[role="banner"] {
         color: $color1;
         text-decoration: none;
     }
+    
+    ul { // phone, fax, email list icons
+        li {
+            a, span {
+                display: inline-block;
+                
+                &:before {
+                    padding-right: 10px;
+                }
+            }
+            a[property="telephone"]:before {
+                content: url(../images/icon-phone.svg);
+            }
+            a[property="email"]:before  {
+                content: url(../images/icon-mail.svg);
+            }
+            span[property="faxNumber"]:before  {
+                content: url(../images/icon-fax.svg);
+            }
+        }
+    }
 }
 
 #privacy {
@@ -374,10 +398,11 @@ header[role="banner"] {
 }
 
 footer[role="contentinfo"] {
+    font-size: 12px;
     background-color: #f6f7f9;
     color: #595959;
     text-transform: uppercase;
-    padding: em(20px, 16px);
+    padding: em(20px, 12px);
     @include clearfix;
 }
 
@@ -431,7 +456,7 @@ input {
         outline: none;
         background-color: #fff;
     }
-    
+
     @include sm {
         display: inline-block;
         width: 160px;
@@ -464,7 +489,7 @@ button {
     box-sizing: border-box;
     outline: 0;
     width: 140px;
-    
+
     &:focus, &:hover {
         background-color: #fff;
         color: $color1;

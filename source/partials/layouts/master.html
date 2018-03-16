@@ -1,0 +1,50 @@
+{{!-- layouts/master.html --}}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <title>{{#if title}}{{title}}{{else}}AmeriPlus{{/if}}</title>
+        <meta name="description" content="Guaranteed asset protection and vehicle service contracts for your valued customers.">
+        <link href="css/ameriplus.min.css" rel="stylesheet">
+        
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MLG58MN');</script>
+        <!-- End Google Tag Manager -->
+    </head>
+
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLG58MN"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        {{> schema-block }}
+
+            <header role="banner">
+                {{#> hero-block}}
+                {{!-- Custom content per page could be added. --}}
+                {{/hero-block}}
+                
+                {{#> intro-block}}
+                {{!-- Custom content per page could be added. --}}
+                {{/intro-block}}
+                
+                {{#> login-block}}
+                {{!-- Custom content per page could be added. --}}
+                {{/login-block}}
+            </header>
+                {{> content-block }}
+            <footer role="contentinfo">
+                <p>&#169; 2018 General Motors Financial Company, Inc. AmeriPlus is a registered trademark of General Motors Financial Company, Inc. GM Financial is a registered trademark of General Motors LLC. Read our <a href="privacy.html">privacy policy</a>.</p>
+            </footer>
+        </div>
+        {{#> scripts-block}}
+        {{!-- Custom scripts per page can be added. --}}
+        {{/scripts-block}}
+    </body>
+</html>

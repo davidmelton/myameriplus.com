@@ -20,10 +20,10 @@ $web-font-path: '../fonts/';
 	src: url('#{$web-font-path}RobotoSlab-Thin.woff') format('woff');
 }
 
-@font-face {
-	font-family: 'Roboto-Regular';
-	src: url('#{$web-font-path}Roboto-Regular.woff') format('woff');
-}
+//@font-face {
+//	font-family: 'Roboto-Regular';
+//	src: url('#{$web-font-path}Roboto-Regular.woff') format('woff');
+//}
 
 @font-face {
 	font-family: 'Roboto-Light';
